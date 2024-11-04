@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+# Configure this as a Eureka Client
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+# Configure routes for the order service.
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: order
+          uri: lb://order-service
+          predicates:
+            - Path=/orders/**
