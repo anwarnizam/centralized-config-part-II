@@ -1,11 +1,4 @@
 server:
   port: 8081
 message: This service show all the orders
-
-# Configure this as a Eureka Client
-eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
+totalOrders: 20
