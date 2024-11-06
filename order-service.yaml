@@ -1,4 +1,3 @@
 server:
   port: 8081
-message: This service show all the orders
-totalOrders: 20
+message: This service shows all the orders
